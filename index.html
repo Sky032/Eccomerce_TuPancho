@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-icons-png.flaticon.com/512/405/405387.png">
+  <title>Star Wars Pancho's</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" async></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" async></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+
+    <h1 class="titulo-pagina" id="titulo">Star Wars Pancho's</h1>
+
+  <div class="sesion hidden"  id="divSession">
+    <i id="btnCarrito" class="bi bi-cart"></i> <span id="badgeCarrito" class="w3-badge">0</span>
+    <button class="cssbuttons-io" id="btnLogOut">
+      <span><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z" fill="currentColor"></path></svg> Cerrar Sesion</span>
+    </button> 
+  </div>
+
+  </header>
+  
+  <div id="login" class="login-tienda">
+   
+    <label for="usuario">Jedi</label>
+    <input type="text" name="usuario" id="usuario">
+   
+    <label for="clave">Password Del Lado Oscuro</label>
+    <input type="text" id="clave">
+    
+    <button class="btn-primary ing" id="btnLogin"> Ingresar</button>
+    <button class="btn-primary ing" id="btnCrear"> Crear Usuario Jedi </button>
+
+  </div>
+
+  <div id="crear2" class="contenedorCrear hidden">
+   
+    <label for="NuevoUsuario">Nuevo Jedi</label>
+    <input type="text" name="NuevoUsuario" id="NuevoUsuario">
+   
+    <label for="NuevaClave">Nueva Password</label>
+    <input type="text" id="NuevaClave">
+    
+    <button class="btn-primary ing" id="CrearBTNfinal"> Crear!</button>
+
+  </div>
+
+  <p class="error-login" id="errorLogin"></p>
+
+  <div class="contenedor-tienda hidden" id="contenedorTienda"></div>
+
+  <div class="carrito hidden" id="contenedorCarrito">
+    <div class="listaProductos" id="listaProductos"></div>
+    <button class="abonar" id="ABONAR"> ABONAR </button>
+    <button class="cancelar" id="cancelar"> Vaciar Carrito</button>
+  </div>
+
+  <div class="gracias hidden" id="gracias"> MUCHAS GRACIAS POR VISITARNOS Y HACER SU PEDIDO </div>
+
+  
+
+  <div id="admin" class="hidden">
+    <select name="" id="eliminarProductos"></select>
+    <button id="btnEliminarProd">Eliminar Producto</button>
+  </div>
+  <script src="js/dom.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/ajax_fetch.js"></script>
+  <script src="js/logica.js"></script>
+</body>
+</html>
